@@ -22,7 +22,7 @@ public class Program {
 		System.out.println("QTD");
 		product.quant = sc.nextInt();
 		
-		System.out.println(product.name + "," + product.price + "," + product.quant);
+		System.out.println(product);
 		
 		sc.close();
 	}

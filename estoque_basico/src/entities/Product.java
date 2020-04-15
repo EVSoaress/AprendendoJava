@@ -20,4 +20,14 @@ public class Product {
 		
 		this.quant -= quant; // this.quant = this.quant - quant; --> tanto faz
 	}
+	
+	public String toString() {
+		return name
+		+ ", $"
+		+ String.format("%.2f", price)
+		+", "
+		+ quant
+		+" unity, total: $"
+		+ String.format("%.2f", totalValueInStock());
+	}
 }
