@@ -12,17 +12,34 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		Product product = new Product();
+		
 		
 		System.out.println("Dados do Produto:");
 		System.out.println("Name:");
-		product.name = sc.nextLine();
+		String name = sc.nextLine();
 		System.out.println("Price:");
-		product.price = sc.nextDouble();
+		double price = sc.nextDouble();
 		System.out.println("QTD");
-		product.quant = sc.nextInt();
+	    int quant = sc.nextInt();
+		Product product = new Product(name, price, quant);
 		
-		System.out.println(product);
+		
+		System.out.println();
+		System.out.println("Product Data : " + product);
+		
+		System.out.println();
+		System.out.println("Enter the number of products to be added in stock:");
+		quant = sc.nextInt();
+		product.addProduct(quant);
+		
+		System.out.println();
+		System.out.println("Update Data : " + product);
+		
+	    quant = sc.nextInt();
+	    product.removeProduct(quant);
+	    
+	    System.out.println();
+		System.out.println("Update Data : " + product);
 		
 		sc.close();
 	}
