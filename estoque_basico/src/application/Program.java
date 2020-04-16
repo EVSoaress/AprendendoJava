@@ -23,6 +23,8 @@ public class Program {
 	    int quant = sc.nextInt();
 		Product product = new Product(name, price, quant);
 		
+		product.setName("Computer");//implementação do Set e Get
+		System.out.println("Update name : " + product.getName());//********************* 
 		
 		System.out.println();
 		System.out.println("Product Data : " + product);
