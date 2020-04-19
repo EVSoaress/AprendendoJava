@@ -6,14 +6,21 @@ public class Product {
 	private double price;
 	private int quant;
 	
-	public Product() {	
+	public Product() {		
 	}
 	
-	public Product(String name, double price, int quant) {
+	public Product(String name, double price) {
+		this.name = name;
+		this.price = price;
+	}
+	
+	public Product (String name, double price, int quant) {
 		this.name = name;
 		this.price = price;
 		this.quant = quant;
 	}
+	
+	
 	
 	public String getName() {
 		return name;
@@ -35,10 +42,7 @@ public class Product {
 		return quant;
 	}
 	
-	public Product(String name, double price) {
-		this.name = name;
-		this.price = price;
-	}
+	
 	
 	public double totalValueInStock() {
 		return price * quant;
